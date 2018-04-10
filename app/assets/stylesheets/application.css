@@ -13,6 +13,6 @@
  *= require_tree .
  *= require_self
  # SCSS
- *= require devise_foundation_views_scss
+ *= require devise_bootstrap_views_scss
  # LESS
- *= require devise_foundation_views_less
+ *= require devise_bootstrap_views_less

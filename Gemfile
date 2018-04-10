@@ -62,4 +62,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem 'pg'
-gem 'devise-foundation-views'
+gem 'devise-bootstrap-views'
+gem 'haml-rails', '~> 1.0'
