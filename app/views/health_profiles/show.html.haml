@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Birthday:
+  = @health_profile.birthday
+%p
+  %b Weight:
+  = @health_profile.weight
+%p
+  %b Gender:
+  = @health_profile.gender
+%p
+  %b Illness:
+  = @health_profile.illness
+%p
+  %b User:
+  = @health_profile.user
+
+= link_to 'Edit', edit_health_profile_path(@health_profile)
+\|
+= link_to 'Back', health_profiles_path
