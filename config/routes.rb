@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :health_profiles
   get 'pages/index'
   devise_for :users
   root to: 'pages#index'
