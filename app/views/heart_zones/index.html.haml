@@ -1,0 +1,31 @@
+%h1 Listing heart_zones
+
+%table
+  %thead
+    %tr
+      %th Maxhr
+      %th Rhravg
+      %th Illness
+      %th Drugs
+      %th Age
+      %th User
+      %th
+      %th
+      %th
+
+  %tbody
+    - @heart_zones.each do |heart_zone|
+      %tr
+        %td= heart_zone.maxhr
+        %td= heart_zone.rhravg
+        %td= heart_zone.illness
+        %td= heart_zone.drugs
+        %td= heart_zone.age
+        %td= heart_zone.user
+        %td= link_to 'Show', heart_zone
+        %td= link_to 'Edit', edit_heart_zone_path(heart_zone)
+        %td= link_to 'Destroy', heart_zone, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Heart zone', new_heart_zone_path

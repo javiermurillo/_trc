@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  maxhr: 1
+  rhravg: 1
+  illness: false
+  drugs: false
+  age: 1
+  user: one
+
+two:
+  maxhr: 1
+  rhravg: 1
+  illness: false
+  drugs: false
+  age: 1
+  user: two

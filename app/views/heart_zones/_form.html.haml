@@ -1,0 +1,28 @@
+= form_for @heart_zone do |f|
+  - if @heart_zone.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@heart_zone.errors.count, "error")} prohibited this heart_zone from being saved:"
+      %ul
+        - @heart_zone.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :maxhr
+    = f.number_field :maxhr
+  .field
+    = f.label :rhravg
+    = f.number_field :rhravg
+  .field
+    = f.label :illness
+    = f.check_box :illness
+  .field
+    = f.label :drugs
+    = f.check_box :drugs
+  .field
+    = f.label :age
+    = f.number_field :age
+  .field
+    = f.label :user
+    = f.text_field :user
+  .actions
+    = f.submit 'Save'

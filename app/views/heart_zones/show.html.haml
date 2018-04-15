@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Maxhr:
+  = @heart_zone.maxhr
+%p
+  %b Rhravg:
+  = @heart_zone.rhravg
+%p
+  %b Illness:
+  = @heart_zone.illness
+%p
+  %b Drugs:
+  = @heart_zone.drugs
+%p
+  %b Age:
+  = @heart_zone.age
+%p
+  %b User:
+  = @heart_zone.user
+
+= link_to 'Edit', edit_heart_zone_path(@heart_zone)
+\|
+= link_to 'Back', heart_zones_path

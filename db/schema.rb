@@ -10,10 +10,22 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_04_10_152838) do
+ActiveRecord::Schema.define(version: 2018_04_15_001052) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "heart_zones", force: :cascade do |t|
+    t.integer "maxhr", default: 195
+    t.integer "rhravg", default: 60
+    t.boolean "illness", default: false
+    t.boolean "drugs", default: false
+    t.integer "age", default: 25
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_heart_zones_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,8 +40,12 @@ ActiveRecord::Schema.define(version: 2018_04_10_152838) do
     t.string "last_sign_in_ip"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.date "birthday", default: "2018-04-14"
+    t.boolean "is_female", default: true
+    t.string "name"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "heart_zones", "users"
 end
